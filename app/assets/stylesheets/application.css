@@ -14,3 +14,27 @@
  *= require_tree .
  *= require_self
  */
+@media (min-width: 544px) {
+
+	.nav1 li {
+		width: 20%;
+		margin: 0 auto;
+		text-align: center;
+		min-height : 45px;
+		padding-top: 50px;
+		/*padding-left: 100px;*/
+	}
+
+
+
+	.logo {
+		width: 10%;
+	}
+
+
+
+	.bg-faded {
+		height: 100px;
+	}
+
+}

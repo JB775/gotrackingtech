@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
-  get 'contacts/show'
+  get '/', :to => 'landing#show'
+  root 'landing#show'
 
-  get 'users/show'
+  get 'about', :to => 'landing#about'
+  get 'dispatch', :to => 'landing#dispatch'
+  get 'elogs', :to => 'landing#elogs'
 
-  get 'users/edit'
+  resources :contacts
+  get 'contact', :to => 'contacts#show'
+
+  resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
