@@ -2,29 +2,26 @@
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href="carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
-    <script src="js/wow.min.js"></script>
-	<script>
-	  new WOW().init();
-	</script>
   </head>
   <body>
 
     <nav class="navbar navbar-static-top navbar-light bg-faded nav1">
-      <!-- <a href="#" class="navbar-brand">GoTrackingTech</a> -->
+      <a href="#" class="navbar-brand"><%= image_tag 'logo1.png', class:'pull-left' %></a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/elogs">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="/contact">Pricing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
     </nav>
@@ -55,7 +52,7 @@
             <div class="carousel-caption">
               <h1>Electronic Logs</h1>
               <p>Our electronic logbook system can make sure your company meets all government guidelines while helping improve your bottom line.  Let us help you integrate cutting edge technology into your daily operations.</p>
-              <p><a class="btn btn-lg btn-primary" href="/contact" role="button">Learn more</a></p>
+              <p><a class="btn btn-lg btn-primary" href="/elogs" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -64,8 +61,8 @@
           <div class="container">
             <div class="carousel-caption text-xs-right">
               <h1>Value Added Services</h1>
-              <p>Take a look at our suite of value added services.  We are able to automate a lot of the current paper based </p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p>Take a look at our suite of value added services.  We are able to automate repetitive job duties and transition your company to modern electronic processes</p>
+              <p><a class="btn btn-lg btn-primary" href="/dispatch" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>
@@ -89,23 +86,23 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4 wow fadeInLeft">
+        <div class="col-lg-4 wow fadeInLeft mid">
           <%= image_tag 'gps.png', class:'img-circle', width:140, height:140 %>
           <h2>Advanced GPS Tracking</h2>
           <p>Remotely track your assets and communicate with your workforce to improve the efficiency and profitability of your operations.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="/gps" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 wow fadeIn">
+        <div class="col-lg-4 wow fadeIn midlog">
           <%= image_tag 'devices.jpg', class:'img-circle', width:140, height:140 %>
           <h2>Electronic Logs</h2>
           <p>Our proprietary system makes sure you are 100% compliant with the upcoming hours of service mandate.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="/elogs" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 wow fadeInRight">
+        <div class="col-lg-4 wow fadeInRight mid">
           <%= image_tag 'truck.jpg', class:'img-circle', width:140, height:140 %>
           <h2>Automated Dispatch</h2>
           <p>Do more with less with our advanced auto-dispatching system.  Dispatch hundreds of loads with a few clicks of the mouse.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary" href="/dispatch" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -120,7 +117,7 @@
           <p class="lead ">We can help your company prepare for the upcoming hours of service mandate and make sure you hit the ground running.  Request a demo today.</p>
         </div>
         <div class="col-md-5">
-          <%= image_tag 'http://placehold.it/500x500', class:'featurette-image img-fluid center-block' %>
+          <%= image_tag 'logs2.jpg', class:'featurette-image img-fluid center-block' %>
         </div>
       </div>
 
@@ -132,7 +129,7 @@
           <p class="lead">We service multiple industries including oil, commodity logistics, mining, raw material transport, and any general trucking/transport business.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <%= image_tag 'http://placehold.it/500x500', class:'featurette-image img-fluid center-block' %>
+          <%= image_tag 'landairsea.jpg', class:'featurette-image img-fluid center-block' %>
         </div>
       </div>
 
@@ -144,7 +141,7 @@
           <p class="lead">We understand that every operation comes with a unique set of challenges.  We are able to personally work with each company to taylor our technologies to specific operational needs.</p>
         </div>
         <div class="col-md-5">
-          <%= image_tag 'http://placehold.it/500x500', class:'featurette-image img-fluid center-block' %>
+          <%= image_tag 'graph.gif', class:'featurette-image img-fluid center-block' %>
         </div>
       </div>
 
@@ -156,7 +153,7 @@
           <p class="lead">Not sure where to get started? We will help your company measure key analytics so you know where there is room for improvement.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <%= image_tag 'http://placehold.it/500x500', class:'featurette-image img-fluid center-block' %>
+          <%= image_tag 'graph2.png', class:'featurette-image img-fluid center-block' %>
         </div>
       </div>
 
@@ -168,7 +165,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-xs-right wow fadeInRight"><a href="#">Back to top</a></p>
-        <p class="wow fadeInLeft">&copy; 2016 GoTrackingTech, LLC. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="wow fadeInLeft">&copy; 2016 GoTrackingTech, LLC. &middot; <a href="/contact">Privacy</a> &middot; <a href="/contact">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
@@ -184,4 +181,8 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/wow.min.js"></script>
+	<script>
+	  new WOW().init();
+	</script>
   </body>

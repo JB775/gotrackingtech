@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'about', :to => 'landing#about'
   get 'dispatch', :to => 'landing#dispatch'
   get 'elogs', :to => 'landing#elogs'
+  get 'gps', :to => 'landing#gps'
 
   resources :contacts
   get 'contact', :to => 'contacts#show'
