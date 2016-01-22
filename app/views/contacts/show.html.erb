@@ -1,2 +1,64 @@
-<h1>Contacts#show</h1>
-<p>Find me in app/views/contacts/show.html.erb</p>
+<html lang="en" class="demo-1 no-js">
+	<head>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+	</head>
+	<body>
+	    <nav class="navbar navbar-static-top navbar-light bg-faded nav1">
+	      <a href="/" class="navbar-brand"><%= image_tag 'logo1.png', class:'pull-left' %></a>
+	      <ul class="nav navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link" href="/">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/elogs">Features</a>
+	        </li>
+	        <li class="nav-item active">
+	          <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="/about">About</a>
+	        </li>
+	      </ul>
+	    </nav>
+	    <div class="contact_body">
+			<div class="container">
+				<!-- Top Navigation -->
+				<div class="cctop clearfix">
+				</div>
+				<header class="ccheader">
+					<h1>Request Information</h1>	
+					
+				</header>
+				<div class="wrapper">
+	            	
+					<div class="cclogin simple">
+	                	<h2>Contact Us</h2>
+	                	<form method="post" action="">
+	                    <p class="half"><input type="text" name="fname" value="" placeholder="First Name"></p>
+	                    <p class="half last"><input type="text" name="lname" value="" placeholder="Last Name"></p>
+	                    <p><input type="text" name="bname" value="" placeholder="Business Name"></p>
+	                    <p><input type="text" name="Email" value="" placeholder="Email"></p>
+	                    <p><input type="text" name="phone" value="" placeholder="Phone Number"></p>
+	                    <p><input type="text" name="message" value="" placeholder="Question/Message"></p>
+	                    <p>
+	                    <select>
+	                    <option disabled="" selected="" value="0">Gender</option>
+	                    <option value="1">Male</option>
+	                    <option value="2">Female</option>
+	                    </select>
+	                    </p>
+	                    <p><input type="checkbox" name="remember">I agree to the Terms and Conditions.</p>
+	                    <p><input type="checkbox" name="remember">I want to receive news and announcements from GoTrackingTech.</p>
+	                    <p><input type="submit" name="Login" value="Sign up"></p>
+	                  </form>
+	                </div>
+	                
+				</div>
+				
+			</div><!-- /container -->
+		</div>
+		
+	</body>
+</html>

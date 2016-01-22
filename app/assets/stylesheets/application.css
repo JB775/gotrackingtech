@@ -15,6 +15,7 @@
  *= require_self
  */
 
+
 html, body {
 	font-family: 'Raleway', sans-serif;
 }
@@ -23,7 +24,10 @@ html, body {
 	/*color: gray;*/
 }
 
+
 @media (min-width: 544px) {
+
+/*  Main Landing Page  */
 
 	.nav1 li {
 		width: 75px;
