@@ -2,15 +2,27 @@ Rails.application.routes.draw do
   get '/', :to => 'landing#show'
   root 'landing#show'
 
+  # Static Pages
   get 'about', :to => 'landing#about'
   get 'dispatch', :to => 'landing#dispatch'
   get 'elogs', :to => 'landing#elogs'
   get 'gps', :to => 'landing#gps'
 
+  # User Pages
+  resources :users 
+  get 'newuser', :to => 'users#new'
+  get 'preferences', :to => 'users#edit'
+  get 'myaccount', :to => 'users#show'
+
+
+  # Contact Us Page
   resources :contacts
   get 'contact', :to => 'contacts#show'
 
-  resources :users
+  # Login Page
+  resources :sessions
+  get 'login', to: 'sessions#login'
+  get 'logout', to: 'sessions#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

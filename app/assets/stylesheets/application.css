@@ -16,6 +16,8 @@
  */
 
 
+  /*  Non-Screen-Size Dependent CSS   */
+
 html, body {
 	font-family: 'Raleway', sans-serif;
 }
@@ -24,6 +26,26 @@ html, body {
 	/*color: gray;*/
 }
 
+  /*  Flash Messages   */
+
+.flash_message_login {
+
+}
+
+.flash_message_landing {
+	
+}
+
+.lognav {
+	float: right;
+}
+
+.lognav li {
+	padding-right: 15px;
+}
+
+
+  /*  Screen-Size Dependent CSS   */
 
 @media (min-width: 544px) {
 

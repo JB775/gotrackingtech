@@ -23,8 +23,21 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
+       </ul>
+       <ul class="nav navbar-nav lognav">
+        <li class="nav-item">
+          <a class="nav-link" href="/newuser">Create Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><a class="btn btn-primary" href="/contact" role="button">Login</a></a>
+        </li>
       </ul>
     </nav>
+
+    <% if flash[:alert] %>
+		<p class="flash_message_landing"><%= flash[:alert] %></p>
+		<br>
+	<% end %>
 
     <!-- Carousel
     ================================================== -->

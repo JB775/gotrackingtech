@@ -16,18 +16,26 @@
   </ul>
 </nav>
 
-<h1>User Preferences</h1>
+<h1>Login</h1>
+<br>
 
-<%= render 'form' %>
+<% if flash[:alert] %>
+	<p class="flash_message_login"><%= flash[:alert] %></p>
+	<br>
+<% end %>
+
+<%= form_tag sessions_path, :method => :post do %>
+
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+
+  <%= submit_tag "Login"  %>
+
+<% end %>
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%= link_to 'Delete My Account', user_path(@user), :method => :delete %>
+<a href="/newuser">Click Here to Signup</a>
+
+
