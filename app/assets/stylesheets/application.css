@@ -19,7 +19,8 @@
   /*  Non-Screen-Size Dependent CSS   */
 
 html, body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif !important;
+	font-weight: 300 !important;
 }
 
 .text-xs-right {
@@ -44,6 +45,11 @@ html, body {
 	padding-right: 15px;
 }
 
+.signlog_link {
+	padding-left: 10px;
+	font-size: 85%;
+}
+
 
   /*  Screen-Size Dependent CSS   */
 
@@ -52,10 +58,21 @@ html, body {
 /*  Main Landing Page  */
 
 	.nav1 li {
-		width: 75px;
+		width: 100px;
 		text-align: center;
 		padding-top: 25px;
 		/*min-height : 45px;*/
+	}
+
+/*  Login/Logout/Preferences Links in Navbar  */
+
+	.lognav li {
+		width: 100px;
+	}
+
+	.pref {
+		padding-right: 10px;
+		padding-top: 32px !important;
 	}
 
 /*	.nav1 ul {

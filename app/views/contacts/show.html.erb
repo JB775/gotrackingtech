@@ -21,7 +21,27 @@
 	          <a class="nav-link" href="/about">About</a>
 	        </li>
 	      </ul>
-	    </nav>
+	      <ul class="nav navbar-nav lognav">
+		    <% if session[:user_id] %>
+		      <li class="nav-item">
+			    <a class="nav-link" href="/myaccount">My Account</a>
+			  </li>
+		      <li class="nav-item pref">
+		        <a  href="/preferences">Preferences</a>
+		      </li>
+		      <li class="nav-item logoutnav">
+		        <a  href="/logout"><a class="btn btn-primary" href="/logout" role="button">Logout</a></a>
+		      </li>
+		     <% else %>
+		      <li class="nav-item">
+		        <a  href="/newuser">Create Account</a>
+		      </li>
+		      <li class="nav-item">
+		        <a  href="/login"><a class="btn btn-primary" href="/login" role="button">Login</a></a>
+		      </li>
+		    <% end %>
+		  </ul>
+		</nav>
 	    <div class="contact_body">
 			<div class="container">
 				<!-- Top Navigation -->
@@ -35,20 +55,23 @@
 	            	
 					<div class="cclogin simple">
 	                	<h2>Contact Us</h2>
-	                	<form method="post" action="">
+	                	<form method="post" action="<%= contacts_path %>">
 	                    <p class="half"><input type="text" name="fname" value="" placeholder="First Name"></p>
 	                    <p class="half last"><input type="text" name="lname" value="" placeholder="Last Name"></p>
 	                    <p><input type="text" name="bname" value="" placeholder="Business Name"></p>
+	                    <p><input type="text" name="city" value="" placeholder="Business City"></p>
+	                    <!-- <p><input type="text" name="state" value="" placeholder="State"></p> -->
+	                    <p>
+	                    <select>
+	                    <option disabled="" selected="" name="state" value="0">State</option>
+	                    <option value="PA">PA</option>
+	                    <option value="NJ">NJ</option>
+	                    </select>
+	                    </p>
+	                    <p><input type="text" name="job_title" value="" placeholder="Job Title"></p>
 	                    <p><input type="text" name="Email" value="" placeholder="Email"></p>
 	                    <p><input type="text" name="phone" value="" placeholder="Phone Number"></p>
 	                    <p><input type="text" name="message" value="" placeholder="Question/Message"></p>
-	                    <p>
-	                    <select>
-	                    <option disabled="" selected="" value="0">Gender</option>
-	                    <option value="1">Male</option>
-	                    <option value="2">Female</option>
-	                    </select>
-	                    </p>
 	                    <p><input type="checkbox" name="remember">I agree to the Terms and Conditions.</p>
 	                    <p><input type="checkbox" name="remember">I want to receive news and announcements from GoTrackingTech.</p>
 	                    <p><input type="submit" name="Login" value="Sign up"></p>
