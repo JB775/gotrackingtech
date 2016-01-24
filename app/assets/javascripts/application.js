@@ -15,3 +15,28 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+
+(function () {
+    var removeSuccess;
+    removeSuccess = function () {
+        return $('.button').removeClass('success');
+    };
+    $(document).ready(function () {
+        return $('.button').click(function () {
+            $(this).addClass('success');
+            return setTimeout(removeSuccess, 3000);
+        });
+    });
+}.call(this));
+
+$(document).ready(function() {
+
+	$(".button").click(function(event) {
+	  event.preventDefault();
+	  $("#new_contact").submit();
+	  // console.log("clicked");
+	});
+
+        
+
+});

@@ -1,57 +1,48 @@
-<nav class="navbar navbar-static-top navbar-light bg-faded nav1">
-  <a href="#" class="navbar-brand"><%= image_tag 'logo1.png', class:'pull-left' %></a>
-  <ul class="nav navbar-nav">
-    <li class="nav-item"> <!--   Active goes here accordingly   -->
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/elogs">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/contact">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/about">About</a>
-    </li>
-  </ul>
-  <ul class="nav navbar-nav lognav">
-    <li class="nav-item">
-      <a  href="/login"><a class="btn btn-primary" href="/login" role="button">Login</a></a>
-    </li>
-  </ul>
-</nav>
-<h1>Sign Up Below!</h1>
-<br>
+<div class="contact_body">
+  <div class="container">
+    <header class="ccheader">
+      <h1>Create Account</h1> 
+    </header>
+    <div class="wrapper">
+      <div class="cclogin simple">
+        <%= form_for @user do |f| %>
+          <p>
+            <%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
+          </p>
+          <p>
+            <%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov"  %>
+          </p>
+          <p></p>
+          <p class="half ">
+            <%= f.text_field :email, :placeholder => 'Email', :class => "hov"  %>
+          </p>
+          <p class="half last">
+            <%= f.text_field :email_confirmation, :placeholder => 'Confirm Email', :class => "hov"  %>
+          </p>
+          <p class="half">
+            <%= f.password_field :password, :placeholder => 'Password', :class => "hov"  %>
+          </p>
+          <p class="half last">
+            <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password', :class => "hov"  %>
+          </p>
+          <p class="half">
+            <%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov"  %>
+          </p>
+          <p>
+            <%= f.submit 'Create Account', :class => "sub_button"%>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_for @user do |f| %>
 
-  <%= f.label :fname %>
-  <%= f.text_field :fname  %>
 
-  <%= f.label :lname %>
-  <%= f.text_field :lname  %>
+<div class="container marketing">
+  <p><%= flash[:alert] %></p>
+  <p><%= flash[:message] %></p>
 
-  <%= f.label :email %>
-  <%= f.text_field :email  %>
-
-  <%= f.label :email_confirmation %>
-  <%= f.text_field :email_confirmation  %>
   <br>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password  %>
-  
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation  %>
-  
-  <%= f.label :phone %>
-  <%= f.text_field :phone  %>
-
-  <%= f.submit :create %>
-<% end %>
-
-<p><%= flash[:alert] %></p>
-<p><%= flash[:message] %></p>
-
-<br>
-<p><a href="/login" class="signlog_link">Have an Account?  Click Here to Sign In.</a></p>
+  <p><a href="/login" class="signlog_link">Have an Account?  Click Here to Sign In.</a></p>
+</div>

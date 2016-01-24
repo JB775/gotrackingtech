@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   # Contact Us Page
   resources :contacts
-  get 'contact', :to => 'contacts#show'
+  get 'contact', :to => 'contacts#new'
 
   # Login Page
   resources :sessions

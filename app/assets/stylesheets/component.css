@@ -80,7 +80,19 @@
 	background:#FFFFFF;
 	color:#757575;
 	cursor:pointer;
+	/*margin-left: 35%;*/
 }
+
+/*.cclogin input[type="submit"]:hover {
+	background-color: blue;
+	color:#515151;
+}*/
+
+.hov:hover {
+	background-color: #e9e9e9;
+}
+
+
 
 .cclogin.icons input[type="text"],
 .cclogin.icons input[type="password"] {
