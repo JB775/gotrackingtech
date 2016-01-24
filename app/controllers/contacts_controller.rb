@@ -12,14 +12,15 @@ class ContactsController < ApplicationController
     lname = params[:contact][:lname]
     company = params[:contact][:company]
     city = params[:contact][:city]
-    state = params[:contact][:state]
+    state = params[:state]
     job_title = params[:contact][:job_title]
     email = params[:contact][:email]
     phone = params[:contact][:phone]
+    num_employees = params[:contact][:num_employees]
     message = params[:contact][:message]
     # id = session[:user_id]
     @Contact = Contact.create(fname: fname, lname: lname, company: company, city: city, state: state, 
-    	job_title: job_title, email: email, phone: phone, message: message)
+    	job_title: job_title, email: email, phone: phone, num_employees: num_employees, message: message)
 
     # @contact = Contact.create(params.require(:post).permit(:fname, :message, :user_id))
     # flash[:notice] = "Contact Successfully Created by User # #{id}"
