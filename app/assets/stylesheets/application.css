@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap.min
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -36,6 +37,22 @@ html, body {
 .flash_message_landing {
 	
 }
+
+/*  About Us Page  */
+.about_wrapper {
+  padding-top: 25px;
+}
+
+.about_pic {
+  width: 75%;
+}
+
+.about_pic_wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
 
 .lognav {
 	float: right;
@@ -309,3 +326,6 @@ html, body {
     top: 1000px !important;
   }
 }*/
+
+
+

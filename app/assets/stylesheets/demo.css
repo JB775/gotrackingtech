@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 .contact_body {
-	background: #054586;
 	color: #fff;
 	font-weight: 400;
 	font-size: 1em;
@@ -10,6 +9,13 @@
 	padding:0;
 	padding-bottom:40px;
 }
+
+.contact_wrapper {
+	background-image: url(USA.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 .contact_body a {
 	color: #f0f0f0;
 	text-decoration: none;

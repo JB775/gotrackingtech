@@ -3,125 +3,127 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
 	</head>
 	<body>
-	    <div class="contact_body">
-			<div class="container">
-				<!-- Top Navigation -->
-				
-				<!-- <div class="cctop clearfix">
-				</div> -->
+		<div class="contact_wrapper">
+		    <div class="contact_body">
+				<div class="container">
+					<!-- Top Navigation -->
+					
+					<!-- <div class="cctop clearfix">
+					</div> -->
 
-				<header class="ccheader">
-					<h1>Contact Us</h1>	
-				</header>
-				<div class="wrapper">
-					<div class="cclogin simple">
-	                	
-	                	<%= form_for @contact, :url => contacts_path, method: :post do |f| %>
-						  <p class="half">
-						  	<%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
-						  </p>
-						  <p class="half last">
-						  	<%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov" %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :email, :placeholder => 'Email', :class => "hov" %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov" %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :company, :placeholder => 'Business Name', :class => "hov" %>
-						  </p>
-						  <p class="half">
-						  	<%= f.text_field :city, :placeholder => 'Business City', :class => "hov" %>
-						  </p>
-						  <p class="half last">
-						  	<%= select_tag(:state, options_for_select([
-						  		['State', 'State'], 
-						  		['AK', 'AK'],
-							    ['AL', 'AL'],
-							    ['AR', 'AR'],
-							    ['AZ', 'AZ'],
-							    ['CA', 'CA'],
-							    ['CO', 'CO'],
-							    ['CT', 'CT'],
-							    ['DC', 'DC'],
-							    ['DE', 'DE'],
-							    ['FL', 'FL'],
-							    ['GA', 'GA'],
-							    ['HI', 'HI'],
-							    ['IA', 'IA'],
-							    ['ID', 'ID'],
-							    ['IL', 'IL'],
-							    ['IN', 'IN'],
-							    ['KS', 'KS'],
-							    ['KY', 'KY'],
-							    ['LA', 'LA'],
-							    ['MA', 'MA'],
-							    ['MD', 'MD'],
-							    ['ME', 'ME'],
-							    ['MI', 'MI'],
-							    ['MN', 'MN'],
-							    ['MO', 'MO'],
-							    ['MS', 'MS'],
-							    ['MT', 'MT'],
-							    ['NC', 'NC'],
-							    ['ND', 'ND'],
-							    ['NE', 'NE'],
-							    ['NH', 'NH'],
-							    ['NJ', 'NJ'],
-							    ['NM', 'NM'],
-							    ['NV', 'NV'],
-							    ['NY', 'NY'],
-							    ['OH', 'OH'],
-							    ['OK', 'OK'],
-							    ['OR', 'OR'],
-							    ['PA', 'PA'],
-							    ['RI', 'RI'],
-							    ['SC', 'SC'],
-							    ['SD', 'SD'],
-							    ['TN', 'TN'],
-							    ['TX', 'TX'],
-							    ['UT', 'UT'],
-							    ['VA', 'VA'],
-							    ['VT', 'VT'],
-							    ['WA', 'WA'],
-							    ['WI', 'WI'],
-							    ['WV', 'WV'],
-							    ['WY', 'WY'] ])) %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :job_title, :placeholder => 'Job Title', :class => "hov" %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :num_employees, :placeholder => 'Number of Employees', :class => "hov" %>
-						  </p>
-						  <p>
-						  	<%= f.text_field :message, :placeholder => 'Question/Message', :class => "hov" %>
-						  </p>
-						  <p class="old_contact_button">
-						  	<%= f.submit 'Submit'%>
-						  </p>
-						  <br>
-						  <br>
-						<% end %>
+					<header class="ccheader">
+						<h1>Contact Us</h1>	
+					</header>
+					<div class="wrapper">
+						<div class="cclogin simple">
+		                	
+		                	<%= form_for @contact, :url => contacts_path, method: :post do |f| %>
+							  <p class="half">
+							  	<%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
+							  </p>
+							  <p class="half last">
+							  	<%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov" %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :email, :placeholder => 'Email', :class => "hov" %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov" %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :company, :placeholder => 'Business Name', :class => "hov" %>
+							  </p>
+							  <p class="half">
+							  	<%= f.text_field :city, :placeholder => 'Business City', :class => "hov" %>
+							  </p>
+							  <p class="half last">
+							  	<%= select_tag(:state, options_for_select([
+							  		['State', 'State'], 
+							  		['AK', 'AK'],
+								    ['AL', 'AL'],
+								    ['AR', 'AR'],
+								    ['AZ', 'AZ'],
+								    ['CA', 'CA'],
+								    ['CO', 'CO'],
+								    ['CT', 'CT'],
+								    ['DC', 'DC'],
+								    ['DE', 'DE'],
+								    ['FL', 'FL'],
+								    ['GA', 'GA'],
+								    ['HI', 'HI'],
+								    ['IA', 'IA'],
+								    ['ID', 'ID'],
+								    ['IL', 'IL'],
+								    ['IN', 'IN'],
+								    ['KS', 'KS'],
+								    ['KY', 'KY'],
+								    ['LA', 'LA'],
+								    ['MA', 'MA'],
+								    ['MD', 'MD'],
+								    ['ME', 'ME'],
+								    ['MI', 'MI'],
+								    ['MN', 'MN'],
+								    ['MO', 'MO'],
+								    ['MS', 'MS'],
+								    ['MT', 'MT'],
+								    ['NC', 'NC'],
+								    ['ND', 'ND'],
+								    ['NE', 'NE'],
+								    ['NH', 'NH'],
+								    ['NJ', 'NJ'],
+								    ['NM', 'NM'],
+								    ['NV', 'NV'],
+								    ['NY', 'NY'],
+								    ['OH', 'OH'],
+								    ['OK', 'OK'],
+								    ['OR', 'OR'],
+								    ['PA', 'PA'],
+								    ['RI', 'RI'],
+								    ['SC', 'SC'],
+								    ['SD', 'SD'],
+								    ['TN', 'TN'],
+								    ['TX', 'TX'],
+								    ['UT', 'UT'],
+								    ['VA', 'VA'],
+								    ['VT', 'VT'],
+								    ['WA', 'WA'],
+								    ['WI', 'WI'],
+								    ['WV', 'WV'],
+								    ['WY', 'WY'] ])) %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :job_title, :placeholder => 'Job Title', :class => "hov" %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :num_employees, :placeholder => 'Number of Employees', :class => "hov" %>
+							  </p>
+							  <p>
+							  	<%= f.text_field :message, :placeholder => 'Question/Message', :class => "hov" %>
+							  </p>
+							  <p class="old_contact_button">
+							  	<%= f.submit 'Submit'%>
+							  </p>
+							  <br>
+							  <br>
+							<% end %>
 
-						<a class="button" href="#" role="button">
-						  <span>Submit</span>
-						  <div class="icon icon_button">
-						    <i class="fa fa-check"></i>
-						    <i class="fa fa-paper-plane"></i>
-						  </div>
-						</a>
-	                    
-	                    <!-- <p><input type="checkbox" name="remember">I agree to the Terms and Conditions.</p> -->
-	                    <!-- <p><input type="checkbox" name="remember">I want to receive news and announcements from GoTrackingTech.</p> -->
-	                </div>
-				</div>
-			</div><!-- /container -->
+							<a class="button" href="#" role="button">
+							  <span>Submit</span>
+							  <div class="icon icon_button">
+							    <i class="fa fa-check"></i>
+							    <i class="fa fa-paper-plane"></i>
+							  </div>
+							</a>
+		                    
+		                    <!-- <p><input type="checkbox" name="remember">I agree to the Terms and Conditions.</p> -->
+		                    <!-- <p><input type="checkbox" name="remember">I want to receive news and announcements from GoTrackingTech.</p> -->
+		                </div>
+					</div>
+				</div><!-- /container -->
+			</div>
 		</div>
 	</body>
 </html>
