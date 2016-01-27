@@ -1,48 +1,49 @@
-<div class="contact_body">
-  <div class="container">
-    <header class="ccheader">
-      <h1>Create Account</h1> 
-    </header>
-    <div class="wrapper">
-      <div class="cclogin simple">
-        <%= form_for @user do |f| %>
-          <p>
-            <%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
-          </p>
-          <p>
-            <%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov"  %>
-          </p>
-          <p></p>
-          <p class="half ">
-            <%= f.text_field :email, :placeholder => 'Email', :class => "hov"  %>
-          </p>
-          <p class="half last">
-            <%= f.text_field :email_confirmation, :placeholder => 'Confirm Email', :class => "hov"  %>
-          </p>
-          <p class="half">
-            <%= f.password_field :password, :placeholder => 'Password', :class => "hov"  %>
-          </p>
-          <p class="half last">
-            <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password', :class => "hov"  %>
-          </p>
-          <p class="half">
-            <%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov"  %>
-          </p>
-          <p>
-            <%= f.submit 'Create Account', :class => "sub_button"%>
-          </p>
-        <% end %>
+<div class="create_account_wrapper">
+  <div class="container marketing">
+    <div class="contact_body">
+      <div class="container">
+        <header class="ccheader">
+          <h1 class="create_account_h1">Create Account</h1> 
+        </header>
+        <div class="wrapper">
+          <div class="cclogin simple">
+            <%= form_for @user do |f| %>
+              <p>
+                <%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
+              </p>
+              <p>
+                <%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov"  %>
+              </p>
+              <p></p>
+              <p class="half ">
+                <%= f.text_field :email, :placeholder => 'Email', :class => "hov"  %>
+              </p>
+              <p class="half last">
+                <%= f.text_field :email_confirmation, :placeholder => 'Confirm Email', :class => "hov"  %>
+              </p>
+              <p class="half">
+                <%= f.password_field :password, :placeholder => 'Password', :class => "hov"  %>
+              </p>
+              <p class="half last">
+                <%= f.password_field :password_confirmation, :placeholder => 'Confirm Password', :class => "hov"  %>
+              </p>
+              <p class="half">
+                <%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov"  %>
+              </p>
+              <p>
+                <%= f.submit 'Create Account', :class => "sub_button"%>
+              </p>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
+
+
+    <p class="flash_message_newuser"><%= flash[:alert] %></p>
+    <p><%= flash[:message] %></p>
+
+    <br>
+    <p><a href="/login" class="signlog_link have_account">Have an Account?  Click Here to Sign In.</a></p>
   </div>
-</div>
-
-
-
-<div class="container marketing">
-  <p><%= flash[:alert] %></p>
-  <p><%= flash[:message] %></p>
-
-  <br>
-  <p><a href="/login" class="signlog_link">Have an Account?  Click Here to Sign In.</a></p>
 </div>

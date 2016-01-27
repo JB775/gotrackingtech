@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # Static Pages
   get 'about', :to => 'landing#about'
   get 'dispatch', :to => 'landing#dispatch'
-  get 'elogs', :to => 'landing#elogs'
+  get 'features', :to => 'landing#features'
   get 'gps', :to => 'landing#gps'
+  get 'pricing', :to => 'landing#pricing'
+  get 'privacy', :to => 'landing#privacy'
 
   # User Pages
   resources :users 

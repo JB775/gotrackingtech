@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       end
 
       end
-      flash[:alert] = "Error Creating User, Please Try Again"
+      flash[:alert] = "Error Creating User, Please Fill Out All Fields"
       redirect_to new_user_path   
     end
 
