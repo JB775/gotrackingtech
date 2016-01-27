@@ -35,8 +35,16 @@ html, body {
 }
 
 .flash_message_landing {
-	
+  padding-left: 25px;
 }
+
+
+
+/*  Edit User Page  */
+.edit_user_wrapper {
+  margin-top: 30px;
+}
+
 
 /*  About Us Page  */
 .about_wrapper {
@@ -121,8 +129,9 @@ html, body {
 
 /*  Contact Us Page  */
 .old_contact_button {
-  display: none;
+  /*display: none;*/
 }
+
 
 @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
 

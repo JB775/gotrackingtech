@@ -1,12 +1,16 @@
 <%= form_for @user, html: { multipart: true } do |f|  %>
 
 <p>
-	<%= f.label :email  %>
-	<%= f.text_field :email %>
+	<%= f.label :email, "Update Primary Email:"  %>
+	<%= f.text_field :email, :style => "width:200px;" %>
 
 </p>
 <p>
-	<%= f.label :password %>
+	<%= f.label :password, "Change Password:" %>
+	<%= f.password_field :password %>
+</p>
+<p>
+	<%= f.label :password, "Confirm New Password:" %>
 	<%= f.password_field :password %>
 </p>
 <p>

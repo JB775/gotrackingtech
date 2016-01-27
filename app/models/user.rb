@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   validates :password, presence: true
   # validates :password, :presence => { :message => " cannot be blank" }
   validates :password, confirmation:true
-  validates :password, length: { minimum: 4 }
+  validates :password, length: { minimum: 6 }
 
   # validates :password, confirmation: { message: "Password's Do Not Match!!!"}
 

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if @user 
       if @user.password == params[:password] 
         session[:user_id] = @user.id
-        flash[:alert] = "Hello #{@user.email}!"
+        flash[:alert] = "Hello #{@user.fname}!"
         cookies[:test_cookie] = "goTrackingTech"
         redirect_to root_path
       else

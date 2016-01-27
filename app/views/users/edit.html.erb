@@ -1,19 +1,26 @@
-<div class="container marketing">
+<div class="edit_user_wrapper">
+	<div class="container marketing">
 
-	<h1>User Preferences</h1>
+		<h1>User Preferences</h1>
 
-	<%= render 'form' %>
+		<% if flash[:notice] %>
+			<p class="flash_message_landing"><%= flash[:notice] %></p>
+			<br>
+		<% end %>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<%= link_to 'Delete My Account', user_path(@user), :method => :delete %>
+		<%= render 'form' %>
 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<%= link_to 'Delete My Account', user_path(@user), :method => :delete %>
+
+	</div>
 </div>

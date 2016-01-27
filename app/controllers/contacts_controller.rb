@@ -19,14 +19,27 @@ class ContactsController < ApplicationController
     num_employees = params[:contact][:num_employees]
     message = params[:contact][:message]
     # id = session[:user_id]
-    @Contact = Contact.create(fname: fname, lname: lname, company: company, city: city, state: state, 
+    contact = Contact.new(fname: fname, lname: lname, company: company, city: city, state: state, 
     	job_title: job_title, email: email, phone: phone, num_employees: num_employees, message: message)
-
     # @contact = Contact.create(params.require(:post).permit(:fname, :message, :user_id))
-    # flash[:notice] = "Contact Successfully Created by User # #{id}"
-    flash[:alert] = 'Successfully Submitted Contact Form'
-    redirect_to root_path
+
+
+    if contact.save
+      # flash[:notice] = "Contact Successfully Created by User # #{id}"
+      flash[:alert] = 'Successfully Submitted Contact Form'
+      redirect_to root_path
+    else
+      if contact.errors.full_messages.any?
+        contact.errors.full_messages.each do |message| 
+          flash[:alert] = message
+        end
+      end
+      # flash[:alert] = "Error Creating Contact Form, Please Try Again"
+      redirect_to new_contact_path 
+    end
+    
   end
+
 
   def show
    #  @likeAmount = Contactlike.all.count

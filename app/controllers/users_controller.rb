@@ -26,11 +26,11 @@ class UsersController < ApplicationController
     else
       if user.errors.full_messages.any?
         user.errors.full_messages.each do |message| 
-        flash[:alert] = "Message Alert"
+        flash[:alert] = message
       end
 
       end
-      flash[:alert] = "Error Creating User, Please Fill Out All Fields"
+      # flash[:alert] = "Error Creating User, Please Fill Out All Fields"
       redirect_to new_user_path   
     end
 
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     @user = User.find(session[:user_id])
     @user.update(params.require(:user).permit(:email, :password))
     flash[:notice] = "User Successfully Updated"
-    redirect_to user_path(@user)
+    redirect_to edit_user_path(@user)
   end
 
   def destroy
