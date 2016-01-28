@@ -40,10 +40,20 @@ html, body {
 
 
 
+/*  Login Page  */
+.login_wrapper {
+  padding-top: 60px;
+}
+
+
+
+
 /*  Edit User Page  */
 .edit_user_wrapper {
   margin-top: 30px;
 }
+
+
 
 
 /*  About Us Page  */
@@ -130,6 +140,15 @@ html, body {
 /*  Contact Us Page  */
 .old_contact_button {
   /*display: none;*/
+}
+
+.contact_submit {
+  background: #27ae60 !important;
+  color: white !important;
+}
+
+.contact_submit:hover {
+  color: grey !important;
 }
 
 
@@ -233,6 +252,14 @@ html, body {
 .icon_button:hover {
 	color: white;
 }
+
+
+
+/*  All Pages  */
+.social_icon {
+  width: 20px;
+}
+
 
 
   /*  Screen-Size Dependent CSS   */
@@ -372,6 +399,36 @@ html, body {
   /*  Contact Us Button  */
     .button {
     top: 1250px;
+  }
+}
+
+@media (max-width: 1027px) {
+
+  .nav-item {
+    font-size: 1.3vw;
+  }
+
+  .nav-link {
+    /*width: 50px;*/
+  }
+
+  .nav1 li {
+    /*width: 25px;*/
+  }
+
+  .pull-left {
+    width: 20px;
+  }
+
+  .nav-item a {
+    font-size: 1.3vw;
+    padding: 0;
+    width: 20px;
+  }
+
+  .contact_wrapper {
+    background-image: none;
+    background-color: #054586;
   }
 }
 
@@ -550,10 +607,6 @@ margin-bottom:-47px;
 .open > .dropdown-toggle.btn-static {
   background-image: none;
 }
-
-
-
-
 
 
 

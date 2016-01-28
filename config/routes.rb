@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'gps', :to => 'landing#gps'
   get 'pricing', :to => 'landing#pricing'
   get 'privacy', :to => 'landing#privacy'
+  get 'testing', :to => 'landing#testing'
+
 
   # User Pages
   resources :users 
