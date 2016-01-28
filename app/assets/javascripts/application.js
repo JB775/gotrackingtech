@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require wow.min
 //= require bootstrap.min
 //= require_tree .
 
