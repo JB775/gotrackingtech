@@ -260,6 +260,9 @@ html, body {
   width: 20px;
 }
 
+.social_icon:hover {
+  width: 19px;
+}
 
 
   /*  Screen-Size Dependent CSS   */
@@ -439,8 +442,9 @@ html, body {
   }
 
   .contact_wrapper {
-    background-image: none;
-    background-color: #054586;
+    /*background-image: none;
+    background-color: #054586;*/
+    /*background-image: url(usasmall.jpeg);*/
   }
 
   .lognav {
@@ -645,6 +649,7 @@ margin-bottom:-47px;
   background-image: none;
 }
 
+/*  Login Form  */
 
 .login_form {
   width: 225px;

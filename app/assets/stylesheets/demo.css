@@ -11,7 +11,8 @@
 }
 
 .contact_wrapper {
-	background-image: url(USA.png);
+	/*background-image: url(USA.png);*/
+	background-image: url(usa.jpeg);
 	/*background-size: 100% 100%;*/
     background-repeat: no-repeat;
 }
@@ -115,9 +116,54 @@
 
 /* Wrapper Style */
 
-.wrapper{
+.new_user_wrapper{
 	margin:0 auto;	
 	width:500px;	
 }
 
+.contact_us_wrapper {
+	margin:0 auto;	
+	width:500px;	
+}
 
+input.sub_button {
+	background: #27ae60 !important;
+	color: white !important;
+}
+
+input.sub_button:hover {
+	color: grey !important;
+}
+
+@media (max-width: 415px) {
+
+	#new_user {
+		width: 310px !important;
+	}
+
+	.create_account_h1 {
+		font-size: 8vw !important;
+	}
+
+	.contact_us_wrapper {
+		margin:0 auto;	
+		width:310px;	
+	}
+
+	div.cclogin.simple {
+		width: 310px;
+		margin: 0;
+	}
+
+	.new_user_wrapper {
+		width: 310px;
+	}
+
+	.user_outside_form {
+		padding: 0 5px 0 5px;
+	}
+
+	.contact_wrapper {
+    	background-image: url(usasmall.jpeg);
+	}
+}

@@ -2,7 +2,7 @@
 	<body>
 		<div class="contact_wrapper">
 		    <div class="contact_body">
-				<div class="container">
+				<!-- <div class="container"> -->
 					<!-- Top Navigation -->
 					
 					<!-- <div class="cctop clearfix">
@@ -11,10 +11,10 @@
 					<header class="ccheader">
 						<h1>Contact Us</h1>	
 					</header>
-					<div class="wrapper">
+					<div class="contact_us_wrapper">
 						<div class="cclogin simple">
 		                	
-		                	<%= form_for @contact, :url => contacts_path, method: :post do |f| %>
+		                	<%= form_for @contact, :url => contacts_path, method: :post, :class => "contact_us_form" do |f| %>
 							  <p class="half">
 							  	<%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
 							  </p>
@@ -118,7 +118,7 @@
     						<p><%= flash[:message] %></p>
 		                </div>
 					</div>
-				</div><!-- /container -->
+				<!-- </div> -->
 			</div>
 		</div>
 	</body>
