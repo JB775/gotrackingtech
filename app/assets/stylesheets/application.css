@@ -646,6 +646,16 @@ margin-bottom:-47px;
 }
 
 
+.login_form {
+  width: 225px;
+}
 
+.login_form input {
+  border: 1px solid gray;
+}
+
+.login_form_button {
+  border: none !important;
+}
 
 
