@@ -1124,34 +1124,33 @@
     <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
     <script>
-        handler = Gmaps.build('Google');
-        handler.buildMap({
-            provider: {
-              disableDefaultUI: true
-              // pass in other Google Maps API options here
-            },
-            internal: {
-              id: 'map'
-            }
-          },
-          function(){
-            markers = handler.addMarkers([
-              {
-                "lat": 39.946984,
-                "lng": -75.173995,
-                "picture": {
-                  "url": "http://www.google.com/mapfiles/marker.png",
-                  "width":  32,
-                  "height": 32
-                },
-                "infowindow": "hello!"
-              }
-            ]);
-            handler.bounds.extendWith(markers);
-            handler.fitMapToBounds();
-            handler.getMap().setZoom(14);
-          }
-        );
+      var handler = Gmaps.build('Google');
+      var markerArray = [];
+      function buildMarkersArray() {
+          var arrayLength = <%= @coordArray.length %>;
+
+         for (var i = 0; i < arrayLength; i++) {
+          <% for i in 0..@coordArray.length-1 %>
+            var thisObj = {
+              lat: <%= @coordArray[i][:lat] %>,
+              lng: <%= @coordArray[i][:lng] %>
+            };
+
+            markerArray.push(thisObj);
+            <% end %>
+         };
+          // return markerArray;
+          console.log("ran func");
+        };
+
+        buildMarkersArray();
+
+      handler.buildMap({ internal: {id: 'map'}}, function(){
+          var markers = handler.addMarkers(markerArray);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    
     </script>
     <script>
 
