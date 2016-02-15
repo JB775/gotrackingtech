@@ -1,151 +1,154 @@
+<head>
+    <%= stylesheet_link_tag    'application-nondashboard', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application-nondashboard', 'data-turbolinks-track' => true %>
+</head>
+<body>
 
-  <body>
+  <% if flash[:alert] %>
+	  <p class="flash_message_landing"><%= flash[:alert] %></p>
+	  <br>
+ <% end %>
 
-    <% if flash[:alert] %>
-		  <p class="flash_message_landing"><%= flash[:alert] %></p>
-		  <br>
-	 <% end %>
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <%= image_tag 'pic1.jpg', class:'first-slide' %>
-          <div class="container">
-            <div class="carousel-caption text-xs-left">
-              <h1>State of the Art Technology</h1>
-              <p>We automate your company's entire workflow process and increase your bottom line</p>
-              <p><a class="btn btn-lg btn-primary" href="/contact" role="button">Request a Demo</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag 'pic3.jpg', class:'second-slide' %>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Electronic Logs</h1>
-              <p>Our electronic logbook system can make sure your company meets all government guidelines while helping improve your bottom line.  Let us help you integrate cutting edge technology into your daily operations.</p>
-              <p><a class="btn btn-lg btn-primary" href="/features" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag 'pic2.jpg', class:'third-slide' %>
-          <div class="container">
-            <div class="carousel-caption text-xs-right">
-              <h1>Value Added Services</h1>
-              <p>Take a look at our suite of value added services.  We are able to automate repetitive job duties and transition your company to modern electronic processes</p>
-              <p><a class="btn btn-lg btn-primary" href="/dispatch" role="button">Browse gallery</a></p>
-            </div>
+  <!-- Carousel
+  ================================================== -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <%= image_tag 'pic1.jpg', class:'first-slide' %>
+        <div class="container">
+          <div class="carousel-caption text-xs-left">
+            <h1>State of the Art Technology</h1>
+            <p>We automate your company's entire workflow process and increase your bottom line</p>
+            <p><a class="btn btn-lg btn-primary" href="/contact" role="button">Request a Demo</a></p>
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4 wow fadeInLeft mid">
-          <%= image_tag 'gps.png', class:'img-circle', width:140, height:140 %>
-          <h2>Advanced GPS Tracking</h2>
-          <p>Remotely track your assets and communicate with your workforce to improve the efficiency and profitability of your operations.</p>
-          <p><a class="btn btn-secondary" href="/gps" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 wow fadeIn midlog">
-          <%= image_tag 'devices.jpg', class:'img-circle', width:140, height:140 %>
-          <h2>Electronic Logs</h2>
-          <p>Our proprietary system makes sure you are 100% compliant with the upcoming hours of service mandate.</p>
-          <p><a class="btn btn-secondary" href="/features" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 wow fadeInRight mid">
-          <%= image_tag 'truck.jpg', class:'img-circle', width:140, height:140 %>
-          <h2>Automated Dispatch</h2>
-          <p>Do more with less with our advanced auto-dispatching system.  Dispatch hundreds of loads with a few clicks of the mouse.</p>
-          <p><a class="btn btn-secondary" href="/dispatch" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette wow fadeInUp">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Ask us about our electronic logbook system.<span class="text-muted">The HOS mandate will be in place before you know it.</span></h2>
-          <p class="lead ">We can help your company prepare for the upcoming hours of service mandate and make sure you hit the ground running.  Request a demo today.</p>
-        </div>
-        <div class="col-md-5">
-          <%= image_tag 'logs2.jpg', class:'featurette-image img-fluid center-block' %>
+      <div class="carousel-item">
+        <%= image_tag 'pic3.jpg', class:'second-slide' %>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Electronic Logs</h1>
+            <p>Our electronic logbook system can make sure your company meets all government guidelines while helping improve your bottom line.  Let us help you integrate cutting edge technology into your daily operations.</p>
+            <p><a class="btn btn-lg btn-primary" href="/features" role="button">Learn more</a></p>
+          </div>
         </div>
       </div>
-
-      <hr class="featurette-divider wow fadeInRight">
-
-      <div class="row featurette wow fadeInUp">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">We cater to multiple industries. <span class="text-muted">Our technology is universal.</span></h2>
-          <p class="lead">We service multiple industries including oil, commodity logistics, mining, raw material transport, and any general trucking/transport business.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <%= image_tag 'landairsea.jpg', class:'featurette-image img-fluid center-block' %>
+      <div class="carousel-item">
+        <%= image_tag 'pic2.jpg', class:'third-slide' %>
+        <div class="container">
+          <div class="carousel-caption text-xs-right">
+            <h1>Value Added Services</h1>
+            <p>Take a look at our suite of value added services.  We are able to automate repetitive job duties and transition your company to modern electronic processes</p>
+            <p><a class="btn btn-lg btn-primary" href="/dispatch" role="button">Browse gallery</a></p>
+          </div>
         </div>
       </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div><!-- /.carousel -->
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette wow fadeInUp">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Customized solutions.<span class="text-muted">We cater to your specific needs.</span></h2>
-          <p class="lead">We understand that every operation comes with a unique set of challenges.  We are able to personally work with each company to taylor our technologies to specific operational needs.</p>
-        </div>
-        <div class="col-md-5">
-          <%= image_tag 'graph.gif', class:'featurette-image img-fluid center-block' %>
-        </div>
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4 wow fadeInLeft mid">
+        <%= image_tag 'gps.png', class:'img-circle', width:140, height:140 %>
+        <h2>Advanced GPS Tracking</h2>
+        <p>Remotely track your assets and communicate with your workforce to improve the efficiency and profitability of your operations.</p>
+        <p><a class="btn btn-secondary" href="/gps" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 wow fadeIn midlog">
+        <%= image_tag 'devices.jpg', class:'img-circle', width:140, height:140 %>
+        <h2>Electronic Logs</h2>
+        <p>Our proprietary system makes sure you are 100% compliant with the upcoming hours of service mandate.</p>
+        <p><a class="btn btn-secondary" href="/features" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 wow fadeInRight mid">
+        <%= image_tag 'truck.jpg', class:'img-circle', width:140, height:140 %>
+        <h2>Automated Dispatch</h2>
+        <p>Do more with less with our advanced auto-dispatching system.  Dispatch hundreds of loads with a few clicks of the mouse.</p>
+        <p><a class="btn btn-secondary" href="/dispatch" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette wow fadeInUp">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Ask us about our electronic logbook system.<span class="text-muted">The HOS mandate will be in place before you know it.</span></h2>
+        <p class="lead ">We can help your company prepare for the upcoming hours of service mandate and make sure you hit the ground running.  Request a demo today.</p>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette wow fadeInUp">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Analytics.<span class="text-muted">We can help you figure out what to look at.</span></h2>
-          <p class="lead">Not sure where to get started? We will help your company measure key analytics so you know where there is room for improvement.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <%= image_tag 'graph2.png', class:'featurette-image img-fluid center-block' %>
-        </div>
+      <div class="col-md-5">
+        <%= image_tag 'logs2.jpg', class:'featurette-image img-fluid center-block' %>
       </div>
+    </div>
 
-      <hr class="featurette-divider">
+    <hr class="featurette-divider wow fadeInRight">
 
-      <!-- /END THE FEATURETTES -->
-    </div><!-- /.container -->
+    <div class="row featurette wow fadeInUp">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">We cater to multiple industries. <span class="text-muted">Our technology is universal.</span></h2>
+        <p class="lead">We service multiple industries including oil, commodity logistics, mining, raw material transport, and any general trucking/transport business.</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <%= image_tag 'landairsea.jpg', class:'featurette-image img-fluid center-block' %>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette wow fadeInUp">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Customized solutions.<span class="text-muted">We cater to your specific needs.</span></h2>
+        <p class="lead">We understand that every operation comes with a unique set of challenges.  We are able to personally work with each company to taylor our technologies to specific operational needs.</p>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag 'graph.gif', class:'featurette-image img-fluid center-block' %>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette wow fadeInUp">
+      <div class="col-md-7 col-md-push-5">
+        <h2 class="featurette-heading">Analytics.<span class="text-muted">We can help you figure out what to look at.</span></h2>
+        <p class="lead">Not sure where to get started? We will help your company measure key analytics so you know where there is room for improvement.</p>
+      </div>
+      <div class="col-md-5 col-md-pull-7">
+        <%= image_tag 'graph2.png', class:'featurette-image img-fluid center-block' %>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+  </div><!-- /.container -->
 
 
 
-    
-	<script>
-	  new WOW().init();
-	</script>
-  </body>
+  
+<script>
+  new WOW().init();
+</script>
+</body>

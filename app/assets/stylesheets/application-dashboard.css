@@ -1,0 +1,16 @@
+/*
+ *= require ./dashboard/bootstrap.min
+ *= require font-awesome
+ *= require_tree ./dashboard
+ *= require_self
+ */
+
+/*  Map  */
+.mymap {
+	width: 100%;
+ 	height: 333px; 
+}
+
+.non_dashboard {
+	display: none;
+}

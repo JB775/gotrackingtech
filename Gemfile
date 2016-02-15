@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'font-awesome-rails'
 
+gem 'underscore-rails', '~> 1.8.3'
+
+gem 'gmaps4rails', '~> 2.1.2'
+
 gem 'pry-byebug'
 
 # Use ActiveModel has_secure_password
