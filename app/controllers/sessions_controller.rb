@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
         flash[:alert] = "Hello #{@user.fname}!"
         cookies[:test_cookie] = "goTrackingTech"
-        redirect_to root_path
+        redirect_to dashboard_path
       else
         flash[:alert] = "Login Not Successful, Please Try Again"
         redirect_to login_path

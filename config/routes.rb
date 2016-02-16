@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'privacy', :to => 'landing#privacy'
   get 'testing', :to => 'landing#testing'
   get 'dashboard', :to => 'landing#dashboard'
+  get 'map', :to => 'landing#map'
 
 
   # User Pages
