@@ -20,6 +20,8 @@
 					<header class="ccheader">
 						<h1>Contact Us</h1>	
 					</header>
+					<p class="flash_message_newuser"><%= flash[:alert] %></p>
+    						<p><%= flash[:message] %></p>
 					<div class="contact_us_wrapper">
 						<div class="cclogin simple">
 		                	
@@ -107,24 +109,22 @@
 							  	<%= f.text_field :message, :placeholder => 'Question/Message', :class => "hov" %>
 							  </p>
 							  <p class="old_contact_button">
-							  	<%= f.submit 'Submit', :class => "contact_submit", :style => "width:125px;"%>
+							  	<%= f.submit 'Submit', :class => "contact_submit wow slideInUp", :style => "width:125px;"%>
 							  </p>
 							  <br>
 							  <br>
 							<% end %>
 
-							<!-- <a class="button" href="#" role="button">
+							<a class="button fancy_button" href="#" role="button">
 							  <span>Submit</span>
 							  <div class="icon icon_button">
 							    <i class="fa fa-check"></i>
 							    <i class="fa fa-paper-plane"></i>
 							  </div>
-							</a> -->
+							</a>
 		                    
 		                    <!-- <p><input type="checkbox" name="remember">I agree to the Terms and Conditions.</p> -->
 		                    <!-- <p><input type="checkbox" name="remember">I want to receive news and announcements from GoTrackingTech.</p> -->
-		                    <p class="flash_message_newuser"><%= flash[:alert] %></p>
-    						<p><%= flash[:message] %></p>
 		                </div>
 					</div>
 				<!-- </div> -->

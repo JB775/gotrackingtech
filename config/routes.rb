@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get '/', :to => 'landing#show'
   root 'landing#show'
 
-  # Static Pages
+  # Landing Pages
   get 'about', :to => 'landing#about'
   get 'dispatch', :to => 'landing#dispatch'
   get 'features', :to => 'landing#features'
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'testing', :to => 'landing#testing'
   get 'dashboard', :to => 'landing#dashboard'
   get 'map', :to => 'landing#map'
+  get 'routehistory', :to => 'landing#routehistory'
 
 
   # User Pages
