@@ -12,7 +12,8 @@
 
 .contact_wrapper {
 	/*background-image: url(USA.png);*/
-	background-image: url(../usa.jpeg);
+	/*background-image: url(../usa.jpeg);*/
+	background-image: image-url("usa.jpeg");
 	/*background-size: 100% 100%;*/
     background-repeat: no-repeat;
 }
