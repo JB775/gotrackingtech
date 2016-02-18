@@ -691,8 +691,10 @@ margin-bottom:-47px;
   background-color: #fafafa;
 }
 
-
-
+.contact_background {
+  background-color: #f6f6f6;
+  padding: 8px 8px 0px 8px;
+}
 
 
 

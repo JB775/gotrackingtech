@@ -13,7 +13,7 @@
 .contact_wrapper {
 	/*background-image: url(USA.png);*/
 	background-image: url(usa);
-	background-color: #054586;
+	/*background-color: #054586;*/
 	/*background-image: image-url("usa.jpeg");*/
 	/*background-size: 100% 100%;*/
     background-repeat: no-repeat;
@@ -166,6 +166,6 @@ input.sub_button:hover {
 	}
 
 	.contact_wrapper {
-    	background-image: url(../usasmall.jpeg);
+    	background-image: url(usasmall);
 	}
 }
