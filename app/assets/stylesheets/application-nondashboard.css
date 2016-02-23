@@ -84,7 +84,7 @@ html, body {
 
 /*  Create New User */
 .create_account_wrapper {
-  /*background-color: #054586;*/
+  background-color: #054586;
 }
 
 .create_account_h1 {
@@ -440,8 +440,8 @@ html, body {
   }
 
   .contact_wrapper {
-    /*background-image: none;
-    background-color: #054586;*/
+    /*background-image: none;*/
+    /*background-color: #054586;*/
     /*background-image: url(usasmall.jpeg);*/
   }
 
