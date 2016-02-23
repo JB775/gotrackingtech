@@ -23,22 +23,22 @@
 		                	
 		                	<%= form_for @contact, :url => contacts_path, method: :post, :class => "contact_us_form" do |f| %>
 							  <p class="half">
-							  	<%= f.text_field :fname, :placeholder => 'First Name', :class => "hov" %>
+							  	<%= f.text_field :fname, :placeholder => 'First Name', :class => "hov contact_form_border" %>
 							  </p>
 							  <p class="half last">
-							  	<%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov" %>
+							  	<%= f.text_field :lname, :placeholder => 'Last Name', :class => "hov contact_form_border" %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :email, :placeholder => 'Email', :class => "hov" %>
+							  	<%= f.text_field :email, :placeholder => 'Email', :class => "hov contact_form_border" %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov" %>
+							  	<%= f.text_field :phone, :placeholder => 'Phone Number', :class => "hov contact_form_border" %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :company, :placeholder => 'Business Name', :class => "hov" %>
+							  	<%= f.text_field :company, :placeholder => 'Business Name', :class => "hov contact_form_border" %>
 							  </p>
 							  <p class="half">
-							  	<%= f.text_field :city, :placeholder => 'Business City', :class => "hov" %>
+							  	<%= f.text_field :city, :placeholder => 'Business City', :class => "hov contact_form_border" %>
 							  </p>
 							  <p class="half last">
 							  	<%= select_tag(:state, options_for_select([
@@ -96,13 +96,13 @@
 								    ['WY', 'WY'] ])) %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :job_title, :placeholder => 'Job Title', :class => "hov" %>
+							  	<%= f.text_field :job_title, :placeholder => 'Job Title', :class => "hov contact_form_border" %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :num_employees, :placeholder => 'Number of Employees', :class => "hov" %>
+							  	<%= f.text_field :num_employees, :placeholder => 'Number of Employees', :class => "hov contact_form_border" %>
 							  </p>
 							  <p>
-							  	<%= f.text_field :message, :placeholder => 'Question/Message', :class => "hov" %>
+							  	<%= f.text_field :message, :placeholder => 'Question/Message', :class => "hov contact_form_border" %>
 							  </p>
 							  <p class="old_contact_button">
 							  	<%= f.submit 'Submit', :class => "contact_submit wow slideInUp", :style => "width:125px;"%>
